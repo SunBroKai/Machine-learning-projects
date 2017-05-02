@@ -13,6 +13,7 @@
 using namespace std;
 
 const int SIZE = 3;
+//Number of inputs/weights in the perceptron.
 
 struct Perceptron
 {
@@ -25,15 +26,19 @@ struct Perceptron
 };  
 
 void InitializeWeights(Perceptron & pct);
-//
+//Randomly generates weights for the perceptron.
+
 void GetInput(Perceptron & p, double & total);
-//
+//User enters values for perceptron inputs.
+
 double PredictorFunction(Perceptron p, double total);
-//
+//Applies predictor function to inputs.
+
 void CostFunction(Perceptron & p, double subOutput);
-//
+//Applies the cost function to update weights.
+
 void UpdateTotal(Perceptron p, double & total);
-//
+//Updates total based on new weights.
 
 //*****************************************************************************
 
@@ -80,6 +85,7 @@ void InitializeWeights(Perceptron & p)
   {
       random = rand()%10;
       random = random/10;
+      //For some reason this only worked if I split it up into two equations ¯\_(ツ)_/¯
       p.weight[i] = random;
       cout << p.weight[i] << endl;
   }
