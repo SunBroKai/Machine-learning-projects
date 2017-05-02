@@ -87,7 +87,7 @@ void InitializeWeights(Perceptron & p)
       random = random/10;
       //For some reason this only worked if I split it up into two equations ¯\_(ツ)_/¯
       p.weight[i] = random;
-      cout << p.weight[i] << endl;
+      //cout << p.weight[i] << endl;
   }
   cout << endl;
   
