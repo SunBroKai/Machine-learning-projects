@@ -1,8 +1,8 @@
 /*
 * Kai Jungbluth
 * 5/1/17
-* I wrote this program to learn the basics of machine learning by creating a 
-* simple perceptron using algorithms I found online.
+* I wrote this program to learn the basics of machine learning by creating and 
+* training a simple perceptron using algorithms I found online.
 */
 
 #include <stdio.h>
