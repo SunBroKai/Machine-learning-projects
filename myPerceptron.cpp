@@ -25,7 +25,7 @@ struct Perceptron
     //int bias; 
 };  
 
-void InitializeWeights(Perceptron & pct);
+void InitializeWeights(Perceptron & p);
 //Randomly generates weights for the perceptron.
 
 void GetInput(Perceptron & p, double & total);
