@@ -31,8 +31,8 @@ void InitializeWeights(Perceptron & p);
 void GetInput(Perceptron & p, double & total);
 //User enters values for perceptron inputs.
 
-double PredictorFunction(Perceptron p, double total);
-//Applies predictor function to inputs.
+double ActivationFunction(Perceptron p, double total);
+//Applies activation function to inputs.
 
 void CostFunction(Perceptron & p, double subOutput);
 //Applies the cost function to update weights.
@@ -55,7 +55,7 @@ int main()
     GetInput(pct,total);
     while(not pct.firing)
     {
-      subOutput = PredictorFunction(pct,total);
+      subOutput = ActivationFunction(pct,total);
       if(subOutput >= pct.threshold)
       {
         pct.firing = true;
@@ -107,7 +107,7 @@ void GetInput(Perceptron & p, double & total)
     return;
 }
 
-double PredictorFunction(Perceptron p, double total)
+double ActivationFunction(Perceptron p, double total)
 {
   return (1/(1+exp(-(total * p.threshold))));
 }
